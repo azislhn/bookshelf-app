@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf Apps</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="head_bar">
+    <h1 class="head_bar__title">Bookshelf App</h1>
+  </header>
+  <main>
+    <section class="input_section">
+      <div class="input-head">
+        <h2>Tambah Buku Baru</h2>
+        <button class="expand">
+          <span class="material-symbols-outlined">
+            expand_more
+          </span>
+        </button>
+        <button class="collapse hidden">
+          <span class="material-symbols-outlined">
+            expand_less
+          </span>
+        </button>
+      </div>
+      <form id="inputBook">
+        <div class="input">
+          <label for="title">Judul</label>
+          <input id="title" type="text" autocomplete="off" required>
+        </div>
+        <div class="input_inline">
+          <label for="booktype">Jenis buku</label>
+          <select name="bookType" id="bookType" required>
+            <option value="">Pilih jenis buku:</option>
+            <option value="Novel">Novel</option>
+            <option value="Komik">Komik</option>
+            <option value="Majalah">Majalah</option>
+            <option value="Tafsir">Tafsir</option>
+            <option value="Ensiklopedia">Ensikplopedia</option>
+            <option value="Karya ilmiah">Karya ilmiah</option>
+            <option value="Lain-lain">Lain-lain</option>
+          </select>
+        </div>
+        <div class="input">
+          <label for="author">Penulis</label>
+          <input id="author" type="text" autocomplete="off" required>
+        </div>
+        <div class="input">
+          <label for="year">Tahun</label>
+          <input id="year" type="number" autocomplete="off" required>
+        </div>
+        <div class="input_inline">
+          <label for="isComplete">Selesai dibaca</label>
+          <input id="isComplete" type="checkbox" onclick="BookIsCompleteCheck()">
+        </div>
+        <button id="bookSubmit" type="submit">Simpan buku ke Rak <span>Belum selesai
+            dibaca</span></button>
+      </form>
+    </section>
+
+    <section class="search_section">
+      <form id="searchBook">
+        <input id="searchBookTitle" type="text" autocomplete="off" placeholder="Cari judul buku">
+      </form>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Belum selesai dibaca</h2>
+
+      <div id="incompleteBookshelfList" class="book_list">
+      </div>
+    </section>
+
+    <section class="book_shelf">
+      <h2>Sudah selesai dibaca</h2>
+
+      <div id="completeBookshelfList" class="book_list">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Created by Aziz Solihin | azizslhn1105@gmail.com
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="addition.js"></script>
+</body>
+
+</html>

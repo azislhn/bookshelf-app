@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+input,
+button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input,
+button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: teal;
+    color: white;
+}
+
+main {
+    max-width: 600px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto 20px auto;
+    padding: 16px 0;
+
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.input-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-head>h2 {
+    color: teal;
+}
+
+.expand,
+.collapse {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-top: 6px;
+    color: teal;
+    cursor: pointer;
+}
+
+.expand>.material-symbols-outlined,
+.collapse>.material-symbols-outlined {
+    font-size: 48px;
+}
+
+.expand.hidden,
+.collapse.hidden {
+    display: none;
+}
+
+#inputBook {
+    display: none;
+}
+
+#inputBook.show {
+    display: block;
+}
+
+.input_section>form {
+    padding: 0 12px 36px 12px;
+}
+
+.input_section>form>.input {
+    margin: 8px 0;
+}
+
+.input_section>form>button {
+    background-color: teal;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.input_section>form>button>span {
+    font-weight: bold;
+}
+
+.input_section>form>.input>input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.input_section>form>.input>label {
+    color: teal;
+    font-weight: bold;
+}
+
+.input_section>form>.input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section>form>.input_inline>label {
+    color: teal;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.input_section>form>.input_inline>select {
+    width: 50%;
+    /* font-size: 14px; */
+    padding: 8px 2px;
+    border-radius: 5px;
+}
+
+.search_section {
+    margin: 0 auto;
+    padding: 12px 0 40px 0;
+}
+
+.search_section>form>input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.book_shelf {
+    margin: 16px 0 0 0;
+}
+
+.book_shelf>h2 {
+    color: teal;
+}
+
+.book_shelf>.book_list {
+    padding: 12px;
+}
+
+.book_shelf>.book_list>.book_item {
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+.book_shelf>.book_list>.book_item>p {
+    font-size: 16px;
+    margin: 2px 0;
+}
+
+.book_shelf>.book_list>.book_item>small {
+    font-size: 12px;
+}
+
+.book_shelf>.book_list>.book_item>h3 {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+.book_shelf>.book_list>.book_item>.action>button {
+    border: 0;
+    padding: 6px 12px;
+    margin: 12px 12px 0 0;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.book_shelf>.book_list>.book_item>.action>.green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.book_shelf>.book_list>.book_item>.action>.red {
+    background-color: darkred;
+    color: white;
+}
+
+footer {
+    background-color: teal;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 20px
+    }
+
+    main {
+        width: 90%;
+    }
+}
